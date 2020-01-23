@@ -16,7 +16,3 @@ mix.js('resources/js/app.js', 'public/js')
 
 mix.copy('vendor/font-awesome/css', 'public/css');
 mix.copy('vendor/font-awesome/fonts', 'public/fonts');
-
-mix.copy('vendor/bootstrap/css/bootstrap.min.css', 'public/css');
-mix.copy('vendor/bootstrap/js/bootstrap.min.js', 'public/js');
-mix.copy('vendor/bootstrap/js/bootstrap.min.js', 'public/js');

@@ -16,7 +16,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
-    <link href="{{asset('css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{asset('vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">    
 
@@ -24,7 +24,7 @@
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
 
     <!-- Bootstrap Core CSS -->
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Theme CSS -->
     <link href="{{asset('css/grayscale.min.css')}}" rel="stylesheet">    
@@ -76,10 +76,10 @@
     </footer>
 
     <!-- jQuery -->
-    <script  type="application/javascript" src="{{ asset('js/jquery.js') }}"></script>
+    <script  type="application/javascript" src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script  type="application/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script  type="application/javascript" src="{{ asset('vendor/bootstrap/js/bootstrap.min.js') }}"></script>
 
     <!-- Plugin JavaScript -->
     <script  type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>

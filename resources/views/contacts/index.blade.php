@@ -101,6 +101,7 @@
                     <button class="btn btn-default btn-lg">Send Email</button>
                 </div>
                 
+                <!-- Message for successful form submission -->
                 @if (Session::has('success'))
                     <div class="success-container">
                         <div class="alert alert-success">{{ Session::get('success') }}</div>
