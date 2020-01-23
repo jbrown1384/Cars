@@ -7,24 +7,24 @@
     <meta name="description" content="<title>Dealer Inspire Code Challenge">
     <meta name="author" content="jb">
 
-    <title>Dealer Inspire Code Challenge</title>
+    <title>Dealer Inspire</title>
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.dealerinspire.com/wp-content/themes/blastoff/images/di-logo2.png">
     <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
-    <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
 
     <!-- Fonts -->
     <link href="{{asset('css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">    
 
+    <!-- Styles -->
+    <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+
     <!-- Bootstrap Core CSS -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
 
     <!-- Theme CSS -->
     <link href="{{asset('css/grayscale.min.css')}}" rel="stylesheet">    
@@ -71,7 +71,7 @@
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <p><small>Copyright 2018 Dealer Inspire</small></p>
+            <p><small>Copyright <script type="text/javascript">document.write( new Date().getFullYear() );</script> Dealer Inspire</small></p>
         </div>
     </footer>
 

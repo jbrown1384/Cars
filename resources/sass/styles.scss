@@ -1,0 +1,15 @@
+@import 'variables';
+
+div.send-container {
+    padding: 15px 0;
+}
+
+div.success-container {
+    margin: 10px 0;
+    padding: 0;
+    width: 100%;    
+}
+
+[role=alert] {
+    color: $red;
+}

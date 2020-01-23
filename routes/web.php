@@ -1,4 +1,4 @@
 <?php
 
-Route::get('/', 'ContactsController@index')->name('contact');
-Route::post('/contact', 'ContactsController@index')->name('contact');
+Route::get('/', 'ContactsController@index')->name('index');
+Route::post('/contact', 'ContactsController@store')->name('store');

@@ -105,7 +105,7 @@ return [
     'required_without_all' => 'The :attribute field is required when none of :values are present.',
     'same' => 'The :attribute and :other must match.',
     'size' => [
-        'numeric' => 'The :attribute must be :size.',
+        'numeric' => 'The :attribute # must be exactly :size digits long.',
         'file' => 'The :attribute must be :size kilobytes.',
         'string' => 'The :attribute must be :size characters.',
         'array' => 'The :attribute must contain :size items.',
