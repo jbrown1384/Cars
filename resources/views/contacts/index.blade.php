@@ -64,7 +64,7 @@
                 <!-- Email -->
                 <div class="form-group">
                     <label for="email" class="col-md-4 col-form-label text-left">{{ __('Email') }}</label>
-                    <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="off" placeholder="test@tester.com">
+                    <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="off" placeholder="email@example.com">
 
                     @error('email')
                     <small class="invalid-feedback" role="alert">

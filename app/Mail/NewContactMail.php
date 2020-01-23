@@ -15,7 +15,7 @@ class NewContactMail extends Mailable
     public $contact;
 
     /**
-     * Create a new message instance.
+     * Create a new message instance
      *
      * @return void
      */
@@ -25,7 +25,7 @@ class NewContactMail extends Mailable
     }
 
     /**
-     * Build the message.
+     * Build the message and pass data to the email template
      *
      * @return $this
      */

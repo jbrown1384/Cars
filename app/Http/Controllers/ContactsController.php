@@ -7,11 +7,21 @@ use Illuminate\Http\Request;
 
 class ContactsController extends Controller
 {
+    /**
+     * Show the dealer inspire landing page
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
     public function index()
     {
         return view('contacts.index');
     }
 
+    /**
+     * Validate and store the data from the contact form
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
     public function store()
     {
         $data = request()->validate([

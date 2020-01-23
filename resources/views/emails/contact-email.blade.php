@@ -3,7 +3,7 @@
 
 {{ $body }}
 
-Thanks,<br>
+Sincerely,<br>
 {{ $from_name }}<br>
 email: {{ $from_email }}<br>
 @if($from_phone)

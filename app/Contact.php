@@ -14,7 +14,12 @@ class Contact extends Model
 {
     protected $guarded = [];
 
-    protected static function boot()
+    /**
+     * Send new contact email on new contact table record
+     *
+     * @return void
+     */
+    protected static function boot():void
     {
         parent::boot();
 
