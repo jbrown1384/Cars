@@ -82,7 +82,7 @@ server {
 - bash ./public/scripts/deploy.sh
 
 ##  Data Import
-- there are currently two options for importanting the test data for the application
+- there are currently two options for importing the schema for the application
 
 ### SQL Data File
 <p>The sql datafile is located in the database/schema folder as a sql file. This contains all of the sql needed to create the schema</p>
