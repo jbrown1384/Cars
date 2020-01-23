@@ -81,3 +81,21 @@ server {
 - cp .env.example .env
 - bash ./public/scripts/deploy.sh
 
+##  Data Import
+- there are currently two options for importanting the test data for the application
+
+### SQL Data File
+<p>The sql datafile is located in the database/schema folder as a sql file. This contains all of the sql needed to create the schema</p>
+
+### Autogenerating the DB structure
+<p>The application utilizes database migrations. The migrations can be run manually with the command: </p>
+
+```
+sudo php artisan migrate
+```
+
+<p>Or, by running the deploy script outlined in the full deployment instructions</p>
+```
+sudo bash ./public/scripts/deploy.sh
+```
+
