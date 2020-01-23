@@ -20,6 +20,7 @@ sudo apt-get install npm
 
 echo "Installing all NPM packages"
 sudo npm install --global cross-env
+sudo npm update
 sudo npm run dev
 
 echo "Install Auth"
