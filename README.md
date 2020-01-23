@@ -16,7 +16,7 @@
     - npm v3.5.2
 - git v2.17.1
 - Other: 
-    - SASS, Blade templating, Bootstrap
+    - Mailtrap.io, SASS, Blade templating, Bootstrap
 
 ## Deployment for full environment
 ### Install Nginx
@@ -95,7 +95,17 @@ sudo php artisan migrate
 ```
 
 <p>Or, by running the deploy script outlined in the full deployment instructions</p>
+
 ```
 sudo bash ./public/scripts/deploy.sh
 ```
 
+##  Sending Emails
+<p>The Dealer Inspire site uses mailtrap.io to send and catch emails for formatting. My default configuration is set up in the .env to use this method but any SMTP variables can be applied.</p>
+
+##  PHPUnit Testing
+<p>Unit tests can be run by executing the following command: </p>
+
+```
+sudo bash ./public/scripts/deploy.sh
+```
