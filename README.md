@@ -103,6 +103,9 @@ sudo bash ./public/scripts/deploy.sh
 ##  Sending Emails
 <p>The Dealer Inspire site uses mailtrap.io to send and catch emails for formatting. My default configuration is set up in the .env to use this method but any SMTP variables can be applied.</p>
 
+<p>Emails are initialized withing the boot function within the Contact model found here: <a href="https://github.com/jbrown1384/Cars/blob/master/app/Contact.php">Contact.php</a>
+</p>
+
 ##  PHPUnit Testing
 <p>Unit tests can be run by executing the following command: </p>
 
