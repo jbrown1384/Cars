@@ -36,6 +36,6 @@ class ContactsController extends Controller
 
         Contact::create($data);
         
-        return redirect(url()->previous().'/#contact')->with('success', 'Your email has been sent!');
+        return redirect(url()->previous().'#contact')->with('success', 'Your email has been sent!');
     }
 }
