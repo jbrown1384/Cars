@@ -32,10 +32,9 @@ class NewContactMail extends Mailable
     public function build()
     {
         return $this->markdown('emails.contact-email')
-            ->to($this->contact->to)
+            ->to($this->contact->recipient_email)
             ->subject('You have received a new message!')
             ->with([
-                'to' => $this->contact->to,
                 'from_name' => $this->contact->name,
                 'from_email' => $this->contact->email,
                 'from_phone' => $this->contact->phone,

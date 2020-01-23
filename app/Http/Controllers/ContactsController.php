@@ -31,8 +31,11 @@ class ContactsController extends Controller
             'message' => 'required|max:255'
         ]);
 
+        // the recipient can be set in the .env file but will also default to a backup email address if the env property isn't set
+        $data['recipient_email'] = env("MAIL_TO", "guy-smiley@example.com");
+
         Contact::create($data);
         
-        return redirect(url()->previous().'#contact')->with('success', 'Your email has been sent!');
+        return redirect(url()->previous().'/#contact')->with('success', 'Your email has been sent!');
     }
 }

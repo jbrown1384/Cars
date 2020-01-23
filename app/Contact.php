@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Contact extends Model
 {
-    protected $guarded = [];
+    protected $guarded = [];   
 
     /**
      * Send new contact email on new contact table record
@@ -24,7 +24,6 @@ class Contact extends Model
         parent::boot();
 
         static::created(function ($contact) {
-            $contact->to = env("MAIL_TO", "guy-smiley@example.com");
             Mail::send(new NewContactMail($contact));
         });
     }    

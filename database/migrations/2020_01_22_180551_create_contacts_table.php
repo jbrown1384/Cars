@@ -18,6 +18,7 @@ class CreateContactsTable extends Migration
             $table->string('name');
             $table->string('email', 100);
             $table->unsignedBigInteger('phone')->nullable();
+            $table->string('recipient_email', 100);
             $table->text('message');
             $table->timestamps();
 
