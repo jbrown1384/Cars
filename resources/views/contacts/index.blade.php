@@ -52,7 +52,7 @@
                 <!-- Full Name -->
                 <div class="form-group">
                     <label for="name" class="col-md-4 col-form-label text-left">{{ __('Full Name') }}</label>
-                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" autocomplete="off" placeholder="John Doe">
+                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" maxlength="35" name="name" value="{{ old('name') }}" autocomplete="off" placeholder="John Doe">
 
                     @error('name')
                     <small class="invalid-feedback" role="alert">
@@ -64,7 +64,7 @@
                 <!-- Email -->
                 <div class="form-group">
                     <label for="email" class="col-md-4 col-form-label text-left">{{ __('Email') }}</label>
-                    <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="off" placeholder="email@example.com">
+                    <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" maxlength="100" name="email" value="{{ old('email') }}" autocomplete="off" placeholder="email@example.com">
 
                     @error('email')
                     <small class="invalid-feedback" role="alert">
@@ -76,7 +76,7 @@
                 <!-- Phone -->
                 <div class="form-group">
                     <label for="phone" class="col-md-4 col-form-label text-left">{{ __('Phone #') }}</label>
-                    <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" autocomplete="off" placeholder="12334567890">
+                    <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" maxlength="10" name="phone" value="{{ old('phone') }}" autocomplete="off" placeholder="12334567890">
 
                     @error('phone')
                     <small class="invalid-feedback" role="alert">
@@ -88,7 +88,7 @@
                 <!-- Message -->
                 <div class="form-group">
                     <label for="message" class="col-md-4 col-form-label text-left">{{ __('Message') }}</label>
-                    <textarea id="message" class="form-control @error('message') is-invalid @enderror" name="message" autocomplete="off" placeholder="Hello! How are you?">{{ old('message') }}</textarea>
+                    <textarea id="message" class="form-control @error('message') is-invalid @enderror" name="message"  maxlength="255" autocomplete="off" placeholder="Hello! How are you?">{{ old('message') }}</textarea>
 
                     @error('message')
                     <small class="invalid-feedback" role="alert">

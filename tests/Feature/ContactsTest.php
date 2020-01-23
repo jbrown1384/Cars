@@ -127,6 +127,66 @@ class ContactsTest extends TestCase
         
         $this->assertDatabaseMissing('contacts', ['name' => '']);        
     } 
+
+    /**
+     * Validation error for name being too long 
+     *
+     * @return void
+     */
+    public function testPostEndpointNameTooLongErrorValidation()
+    {
+        $response = $this->post('/contact', [
+            'name' => 'kajsdklf jklasdfjlk asdklfj klasdfjsakldfj lksadjflk sjdalkfj lksdafjksdjf as',
+            'email' => 'email@example.com',
+            'phone' => 1231231231,
+            'message' => 'this is my test email body'
+        ]);
+        
+        $response->assertSessionHasErrors(['name']);
+        $response->assertStatus(302);  
+        
+        $this->assertDatabaseMissing('contacts', ['name' => '']);        
+    }
+    
+    /**
+     * Validation error for phone number passed that contains alpha-numeric characters 
+     *
+     * @return void
+     */
+    public function testPostEndpointInvalidPhoneNumberErrorValidation()
+    {
+        $response = $this->post('/contact', [
+            'name' => 'John Doe',
+            'email' => 'email@example.com',
+            'phone' => 'A1231231231',
+            'message' => 'this is my test email body'
+        ]);
+        
+        $response->assertSessionHasErrors(['phone']);
+        $response->assertStatus(302);  
+        
+        $this->assertDatabaseMissing('contacts', ['phone' => 'A1231231231']);        
+    } 
+    
+    /**
+     * Validation error for phone number passed that contains too many numbers 
+     *
+     * @return void
+     */
+    public function testPostEndpointPhoneNumberTooLongErrorValidation()
+    {
+        $response = $this->post('/contact', [
+            'name' => 'John Doe',
+            'email' => 'email@example.com',
+            'phone' => '1231231231231',
+            'message' => 'this is my test email body'
+        ]);
+        
+        $response->assertSessionHasErrors(['phone']);
+        $response->assertStatus(302);  
+        
+        $this->assertDatabaseMissing('contacts', ['phone' => '1231231231231']);        
+    }     
     
     /**
      * Validation error for no email passed 
@@ -146,6 +206,25 @@ class ContactsTest extends TestCase
         $response->assertStatus(302);     
         $this->assertDatabaseMissing('contacts', ['email' => '']);   
     } 
+
+    /**
+     * Validation error for invalid email used 
+     *
+     * @return void
+     */
+    public function testPostEndpointInvalidEmailErrorValidation()
+    {
+        $response = $this->post('/contact', [
+            'name' => 'John Doe',
+            'email' => 'asdf',
+            'phone' => 1231231231,
+            'message' => 'this is my test email body'
+        ]);
+        
+        $response->assertSessionHasErrors(['email']);
+        $response->assertStatus(302);     
+        $this->assertDatabaseMissing('contacts', ['email' => '']);   
+    }     
     
     /**
      * Validation error for no message passed 
@@ -164,5 +243,6 @@ class ContactsTest extends TestCase
         $response->assertSessionHasErrors(['message']);
         $response->assertStatus(302);
         $this->assertDatabaseMissing('contacts', ['message' => '']);        
-    }     
+    }
+         
 }
