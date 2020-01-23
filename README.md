@@ -1,11 +1,7 @@
-<p align="center">Cars App</p>
-
-<p align="center">
-    <a target="_blank" href="http://3.14.84.114/" alt="Cars App"><strong>Working Instance Link</strong></a>
-</p>
+<p align="center">Dealer Inspire Site</p>
 
 ## Application
-<p>The Cars Application ---. A working instance of the appication can be found <a target="_blank" href="http://3.14.84.114/" alt="Cars App"><strong>here</strong></a>.</p>
+<p>This Dealer Inspire site contains a contact form that will validate the entered name, email, optional phone number, and message upon submission. This data will be saved to the database as well as emailed to a pre-defined recipient.</p>
 
 ## Stack
 
@@ -20,7 +16,7 @@
     - npm v3.5.2
 - git v2.17.1
 - Other: 
-    - JQuery, SASS, Blade templating, Bootstrap 
+    - SASS, Blade templating, Bootstrap
 
 ## Deployment for full environment
 ### Install Nginx
