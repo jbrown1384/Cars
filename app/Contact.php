@@ -2,7 +2,7 @@
 
 namespace App;
 
-use App\Mail\NewUserWelcomeMail;
+use App\Mail\NewContactMail;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -14,17 +14,13 @@ class Contact extends Model
 {
     protected $guarded = [];
 
-    // protected static function boot()
-    // {
-    //     parent::boot();
+    protected static function boot()
+    {
+        parent::boot();
 
-    //     static::created(function ($user) {
-    //         $user->profile()->create([
-    //             'title' => $user->username
-    //         ]);
-
-    //         // $user->following()->toggle($user->profile);
-    //         Mail::to($user->email)->send(new NewUserWelcomeMail());
-    //     });
-    // }    
+        static::created(function ($contact) {
+            $contact->to = env("MAIL_TO", "guy-smiley@example.com");
+            Mail::send(new NewContactMail($contact));
+        });
+    }    
 }
