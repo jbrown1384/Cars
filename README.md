@@ -107,5 +107,5 @@ sudo bash ./public/scripts/deploy.sh
 <p>Unit tests can be run by executing the following command: </p>
 
 ```
-sudo bash ./public/scripts/deploy.sh
+sudo vendor/bin/phpunit
 ```
